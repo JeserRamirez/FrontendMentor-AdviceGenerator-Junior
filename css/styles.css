@@ -1,0 +1,131 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Oswald:wght@700&display=swap');
+
+/* colors */
+:root {
+    /* Primary */
+
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: #52ffa8;
+
+    /* Neutral */
+
+    --grayish-blue: #4e5d73;
+    --dark-grayish-blue: #323a49;
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+/* global */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue);
+}
+
+p {
+    margin: 0;
+}
+
+
+/* ADVICE GENERATOR API */
+/* card */
+.card {
+    position: relative;
+    background-color: var(--dark-grayish-blue);
+    height: 50vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 1rem;
+    gap: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 3rem;
+        height: 45vh;
+        width: 40vw;
+        -webkit-box-shadow: 6px -1.5px 32px -17.5px #000000;
+        -moz-box-shadow: 6px -1.5px 32px -17.5px #000000;
+        box-shadow: 6px -1.5px 32px -17.5px #000000;
+    }
+}
+
+/* Header */
+.advice-id {
+    color: var(--neon-green);
+    font-size: .6rem;
+    letter-spacing: .2rem;
+}
+
+/* Advice text */
+.advice {
+    text-align: center;
+    color: var(--light-cyan);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+/* Divider */
+.divider-desktop {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .divider-desktop {
+        display: block;
+    }
+
+    .divider-mobile {
+        display: none;
+    }
+}
+
+
+/* Button */
+.container-btn {
+    position: absolute;
+    bottom: -2rem;
+    text-align: center;
+}
+
+.dice-btn {
+    background-color: var(--neon-green);
+    color: var(--light-cyan);
+    border: none;
+    border-radius: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-btn:hover {
+    -webkit-box-shadow: 0.5px -1.5px 32px -2.5px #52ffa8;
+    -moz-box-shadow: 0.5px -1.5px 32px -2.5px #52ffa8;
+    box-shadow: 0.5px -1.5px 32px -2.5px #52ffa8;
+}
+
+.dice-btn img {
+    margin: 0 auto;
+}
